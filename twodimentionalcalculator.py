@@ -1,4 +1,6 @@
 # TWO-DIMENTIONAL CALCULATOR
+# This calculator can calculate the area and perimeter of a square, triangle, circle, or trapezoid based on variables inputted by the user. In addition, this calculator can also calculate the Pythagorean theorem.
+
 import math
 
 question = input("What do you want to know?(area/perimeter/phytagoras): ")
