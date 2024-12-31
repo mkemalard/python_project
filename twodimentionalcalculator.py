@@ -1,14 +1,25 @@
 # TWO-DIMENTIONAL CALCULATOR
 # This calculator can calculate the area and perimeter of a square, triangle, circle, or trapezoid based on variables inputted by the user. In addition, this calculator can also calculate the Pythagorean theorem.
 
+# TWO-DIMENTIONAL CALCULATOR
 import math
 
 question = input("What do you want to know?(area/perimeter/phytagoras): ")
-shape_list = print("rectangle, circle, triangle, trapezoid, parallelogram ")
 
+while question != "area" and question != "perimeter" and question != "phytagoras":
+    print("Sorry for the inconvenience. We are still working on it!")
+    print("or may be there are some typo")
+    question = input("What do you want to know?(area/perimeter/phytagoras): ")
+
+# AREA CALCULATION 
 if question == "area":
-    shape_list
-    shape = input("Choose the shape: ")    
+    shape_list = print("rectangle, circle, triangle, trapezoid, parallelogram ")
+    shape = input("Choose the shape: ")  
+    while shape != "rectangle" and shape != "circle" and shape != "triangle" and shape != "trapezoid" and shape != "parallelogram":
+        print("Sorry for the inconvenience. We still working on it")
+        print("or maybe there are some typo")
+        print("rectangle, circle, triangle, trapezoid, parallelogram ")
+        shape = input("Choose the shape: ")
     if shape == "rectangle":
         length = float(input("Insert the length: "))
         width = float(input("Insert the width: "))
@@ -34,12 +45,17 @@ if question == "area":
         base = float(input("Insert the base: "))
         area_parallelogram = height * base
         print(f"The area of the parallelogram is: {round(area_parallelogram,4)}")
-    else:
-        print("Sorry for the inconvenience. We are still working on it!")
-        print("or may be there are some typo")
+
+
+# PERIMETER CALCULATION
 elif question == "perimeter":
-    shape_list
+    shape_list = print("rectangle, circle, triangle, trapezoid, parallelogram ")
     shape = input("Choose the shape: ")
+    while shape != "rectangle" and shape != "circle" and shape != "triangle" and shape != "trapezoid" and shape != "parallelogram":
+        print("Sorry for the inconvenience. We still working on it")
+        print("or maybe there are some typo")
+        print("rectangle, circle, triangle, trapezoid, parallelogram ")
+        shape = input("Choose the shape: ")
     if shape == "rectangle":
         length = float(input("Insert the length: "))
         width = float(input("Insert the width: "))
@@ -57,11 +73,14 @@ elif question == "perimeter":
         print(f"The area of the triagle is: {round(perimeter_triangle,4)}")
     elif shape == "trapezoid" or shape == "parallelogram":
         print("The perimeter is sum of all sides :)")
-    else:
-        print("Sorry for the inconvenience. We are still working on it!")  
-        print("or may be there are some typo")     
+
+
+# PHYTAGORAS CALCULATION
 elif question == "phytagoras":
-    side = input("What side you want to know? (a/b/c): ")
+    side = input("Which side you want to know? (a/b/c): ")
+    while side != "a" and side != "b" and side != "c":
+        print("You enter the wrong variable!")
+        side = input("Which side you want to know? (a/b/c): ")
     if side == "a":
         a_b = float(input("Insert side b: "))
         a_c = float(input("Insert side c: "))
@@ -77,11 +96,13 @@ elif question == "phytagoras":
         c_b = float(input("Insert side b: "))
         side_c = math.sqrt(pow(c_a,2) + pow(c_b,2))
         print(f"The value of c is: {side_c}")    
-    else:
-        print("You put the wrong variable!")
-else:
-    print("Sorry for the inconvenience. We are still working on it!")
-    print("or may be there are some typo")
+
+
+
+
+        
+
+
 
 
 
