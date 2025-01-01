@@ -5,7 +5,6 @@ total = 0
 
 while True:
     item = input("Insert the item you buy (q or Q to quit): ")
-    abv = len(item)
     if item.lower() == "q":
         break 
     else:
