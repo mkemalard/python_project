@@ -14,7 +14,7 @@ while True:
 print()    
 print("======= Your Cart =======")
 
-for item in items:
+for item, price in zip(items, prices):
     print(f"{item:20} ${price}")
 
 for price in prices:
